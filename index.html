@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Puesto - Emmpanzón</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .puesto {
+            font-size: 3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 20px;
+        }
+        .emmpanzon {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a <span class="emmpanzon">Emmpanzón</span></h1>
+    <p>Tu número de puesto es:</p>
+    <div class="puesto" id="numeroPuesto"></div>
+
+    <script>
+        // Genera un número aleatorio entre 1 y 60
+        function generarNumeroPuesto() {
+            return Math.floor(Math.random() * 60) + 1;
+        }
+
+        // Muestra el número al cargar la página
+        window.onload = function() {
+            document.getElementById('numeroPuesto').textContent = generarNumeroPuesto();
+        };
+    </script>
+</body>
+</html>
